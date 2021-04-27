@@ -28,10 +28,10 @@ public class DemoController {
         return "datasource" + dataSource;
     }
 
-    @RequestMapping("/test2/{name}")
+    @RequestMapping("/test2/{id}")
     @ResponseBody
-    public void test2(@PathVariable String name) {
-        User one = userService.findOne(name);
+    public void test2(@PathVariable Long id) {
+        User one = userService.findOne(id);
         System.out.println(one);
     }
 }

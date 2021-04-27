@@ -1,20 +1,23 @@
-jdbc:
-  driverClassName: com.mysql.jdbc.Driver
-  url: jdbc:mysql://localhost:3306/ssm
-  username: root
-  password: innosen
+#jdbc:
+#  driverClassName: com.mysql.jdbc.Driver
+#  url: jdbc:mysql://localhost:3306/ssm
+#  username: root
+#  password: innosen
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ssm
+    username: root
+    password: innosen
+  redis:
+    host: localhost
+    port: 6379
 
 server:
   port: 80
-
-#spring:
-#  datasource:
-#    driver-class-name: com.mysql.jdbc.Driver
-#    url: jdbc:mydql://localhost:3306/ssm
-#    username: root
-#    password: innosen
-
 mybatis:
-  type-aliases-package: com.w2x.springboot.entity
+  type-aliases-package: com.w2x.springboot.mapper
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+

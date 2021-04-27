@@ -12,7 +12,10 @@ public class User {
     @Id
     @KeySql(useGeneratedKeys = true)
     private int id;
+
     private String username;
+
     private int age;
+
     private String gender;
 }
